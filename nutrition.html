@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout & Nutrition Guide</title>
+    <link rel="stylesheet" href="css/nutrition.css">
+</head>
+<body>
+    <main>
+        <div class="sideImage">
+            ASDAS
+        </div>
+    <div class="container">
+        <h1>Workout & Nutrition Guide</h1>
+        
+        <section id="workout-plans">
+            <h2>Workout Plans</h2>
+            <select id="workout-type">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <button onclick="showWorkout()">Get Plan</button>
+
+            <div class="output">
+                <p id="workout-output"></p>
+            <p id="workout-benefits"></p>
+            </div>
+            
+        </section>
+        
+        <!-- <section id="nutrition-advice">
+            <h2>Nutrition Advice</h2>
+            <button onclick="showNutrition()">Get Nutrition</button>
+            <p id="nutrition-output"></p>
+            <p id="nutrition-benefits"></p>
+        </section> -->
+    </div>
+</main>
+    <script>
+        function showWorkout() {
+            const workoutPlans = {
+                beginner: "Bodyweight exercises: squats, push-ups, lunges, and planks.",
+                intermediate: "Weight training and cardio: deadlifts, bench press, running.",
+                advanced: "High-intensity workouts: CrossFit, HIIT, and heavy compound lifts."
+            };
+            
+            const workoutBenefits = {
+                beginner: "Improves mobility, builds endurance, and strengthens core muscles.",
+                intermediate: "Enhances strength, increases muscle mass, and improves heart health.",
+                advanced: "Maximizes muscle growth, increases athletic performance, and burns fat quickly."
+            };
+            
+            const type = document.getElementById("workout-type").value;
+            document.getElementById("workout-output").innerText = workoutPlans[type];
+            document.getElementById("workout-benefits").innerText = "Benefits: " + workoutBenefits[type];
+
+            return showNutrition();
+        }
+        
+        function showNutrition() {
+            const workoutType = document.getElementById("workout-type").value;
+            
+            const nutritionAdvice = {
+                beginner: "Balanced diet with lean proteins, whole grains, and vegetables.",
+                intermediate: "High protein intake, moderate carbs, and healthy fats.",
+                advanced: "High-calorie meals with protein-rich foods and essential supplements."
+            };
+            
+            const nutritionBenefits = {
+                beginner: "Supports energy levels, aids muscle recovery, and promotes overall health.",
+                intermediate: "Boosts muscle growth, enhances recovery, and maintains strength.",
+                advanced: "Provides necessary fuel for intense training and muscle repair."
+            };
+            
+            document.getElementById("nutrition-output").innerText = "Recommended Nutrition: " + nutritionAdvice[workoutType];
+            document.getElementById("nutrition-benefits").innerText = "Benefits: " + nutritionBenefits[workoutType];
+        }
+    </script>
+</body>
+</html>
