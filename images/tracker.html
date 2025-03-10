@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .clear-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .clear-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Workout/Fitness Tracker</h2>
+        <form id="fitnessForm">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="workout">Workout Type:</label>
+            <select id="workout" required>
+                <option value="Strength Training">Strength Training</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Flexibility">Flexibility & Stretching</option>
+                <option value="Endurance">Endurance</option>
+            </select>
+
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" id="duration" min="1" required>
+
+            <label for="weight">Current Weight (kg):</label>
+            <input type="number" id="weight" step="0.1" required>
+
+            <button type="submit" class="submit-btn">Log Workout</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Workout</th>
+                    <th>Duration</th>
+                    <th>Weight (kg)</th>
+                </tr>
+            </thead>
+            <tbody id="workoutTable">
+                <!-- Data will be added here dynamically -->
+            </tbody>
+        </table>
+
+        <button class="clear-btn" onclick="clearData()">Clear All Data</button>
+    </div>
+
+    <script>
+        document.getElementById("fitnessForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let date = document.getElementById("date").value;
+            let workout = document.getElementById("workout").value;
+            let duration = document.getElementById("duration").value;
+            let weight = document.getElementById("weight").value;
+
+            if (!date || !workout || !duration || !weight) {
+                alert("Please fill in all fields!");
+                return;
+            }
+
+            let workoutData = {
+                date: date,
+                workout: workout,
+                duration: duration,
+                weight: weight
+            };
+
+            let fitnessHistory = JSON.parse(localStorage.getItem("fitnessHistory")) || [];
+            fitnessHistory.push(workoutData);
+            localStorage.setItem("fitnessHistory", JSON.stringify(fitnessHistory));
+
+            addWorkoutToTable(workoutData);
+            document.getElementById("fitnessForm").reset();
+        });
+
+        function addWorkoutToTable(data) {
+            let table = document.getElementById("workoutTable");
+            let row = table.insertRow();
+            row.insertCell(0).textContent = data.date;
+            row.insertCell(1).textContent = data.workout;
+            row.insertCell(2).textContent = data.duration + " min";
+            row.insertCell(3).textContent = data.weight + " kg";
+        }
+
+        function loadWorkouts() {
+            let fitnessHistory = JSON.parse(localStorage.getItem("fitnessHistory")) || [];
+            fitnessHistory.forEach(addWorkoutToTable);
+        }
+
+        function clearData() {
+            localStorage.removeItem("fitnessHistory");
+            document.getElementById("workoutTable").innerHTML = "";
+        }
+
+        loadWorkouts();
+    </script>
+
+</body>
+</html>

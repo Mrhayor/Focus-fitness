@@ -1,0 +1,368 @@
+:root{
+    --color1: #fff;
+    --color2:#964B00;
+    --color3: rgb(240, 190, 141);
+    --color4: #fdb874;
+    --color5:#f5d1ae;
+    --color6: rgb(246, 190, 134);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;  
+}
+
+body {
+   width:100%;
+   max-height: 100vh;
+   background-color: #fff;
+}
+main{
+    height:100%;
+    width:100%;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    /* color:; */
+    font-size: 1rem;
+}
+
+a:hover{
+    color:orange;
+}
+
+/* header */
+
+header{
+    position: relative;
+    padding:0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    height:60px;
+    max-width:1200px;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    background-color: orange;
+    color:#fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition:scale ,2 ease;
+}
+
+.action_btn:hover{
+    scale:1.05;
+    color:#fff;
+}
+
+
+/* dropdown menu */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height:0;
+    width: 300px;
+    background-color: #964B00;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius:10px;/* overflow: hidden; */
+    transition: height.2s cubic-bezier (0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu .open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+  
+/* banner for heading 1 */
+
+.banner{
+    width:100%;
+	height:600px;
+    /* margin-bottom: 80px; */
+	border-radius: none;
+}
+
+.cover{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    /* z-index:2; */
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-image: url("workOutSpace.avif")
+}
+
+.separation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* ======================================= */
+.focused {
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    animation: typing 3s steps(15, end) infinite alternate;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+.movement {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out infinite alternate;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==================================== */
+
+.column{
+    height: 300px;
+    background-color:yellow;
+    display:flex;
+    justify-content: space-between;
+    padding:1% 5%;
+    align-items: center;
+}
+
+.column > div{
+    width:25%;
+    height: 50%;
+    text-align: center;
+    padding: 1% 0;
+	border: 2px solid black;
+	border-radius: 5%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Move the hovered image out */
+.column > div:hover {
+    transform: scale(1.2); /* Makes the image larger */
+    z-index: 2; /* Brings the image to the front */
+}
+
+/* Move other images inward when one is hovered */
+.column > div:not(:hover) {
+    transform: scale(0.9);
+}
+
+
+
+        /* Container for images */
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Styling for images */
+        .image {
+            position: absolute;
+            width: 150px;
+            height: auto;
+            transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+            opacity: 0; /* Initially hidden */
+        }
+
+        /* Left image (comes from left side) */
+        .left {
+            left: -200px; /* Start off-screen */
+        }
+
+        /* Right image (comes from right side) */
+        .right {
+            right: -200px; /* Start off-screen */
+        }
+
+        /* Top image (comes from top side) */
+        .top {
+            top: -200px; /* Start off-screen */
+        }
+
+        /* Active class (applied via JavaScript when scrolled up) */
+        .image.active {
+            opacity: 1;
+        }
+
+        .left.active {
+            transform: translateX(250px);
+        }
+
+        .right.active {
+            transform: translateX(-250px);
+        }
+
+        .top.active {
+            transform: translateY(250px);
+        }
+
+
+/* cards image slides */
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    width: 400%; /* 4 images, so 400% */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual slide */
+.slides input {
+    display: none; /* Hide radio buttons */
+}
+
+/* Image styling */
+.slide {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Navigation */
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 5px;
+}
+
+.manual-btn:hover {
+    background-color: white;
+}
+
+/* Slide Positions */
+#radio1:checked ~ .slides {
+    transform: translateX(0);
+}
+#radio2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+#radio3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+#radio4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+/* ===================================================================
+======================================================================
+*/
+/* responsive design */
+
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+        color: red;
+    }
+
+    
+}
+
+@media(max-width: 500px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+
+    body{
+        background-color: aqua;
+    }
+}

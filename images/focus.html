@@ -1,0 +1,183 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="width=device=width, initial-scale=1.0" />
+        <link rel="stylesheet" href="focus.css"/>
+        <title>fitness app</title>
+        
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo"><a href="#">FOCUS</a></div>
+                <ul class="links">
+                    <li><a href=""></a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <a href="#" class="action_btn">Get Started</a>
+                <div class="toggle_btn">
+                   <i class="fa-solid fa-bars">xxxx</i> 
+                </div>
+
+                
+            </nav>
+            <div class="dropdown_menu">
+                <li><a href=""></a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+            </div>
+        </header>
+
+<main>
+   
+           <div class="banner">
+            <div class="cover separation">
+                <div class="focused">
+                    <h1>We are Focused!</h1>
+                </div>
+                <div class="movement">
+                    <h2>A fitness movement breaking <br>
+                        a sweat for</h2>
+                </div>
+            </div>
+
+        </div>
+
+           <div class="column">
+                
+                <div class="elite">
+                    <h2>FOCUS</h2>
+                    <span>ELITE</span>
+
+                    <p>
+                        Unlimited access to group <br>
+                        classes and at home work outs
+                    </p>
+                </div>
+                <div class="Pro">
+                    <h2>FOCUS</h2>
+                     <span>PRO</span>
+
+                     <p>Unlimited access to <br>
+                        PRO gyms and at home work outs
+                     </p>
+                </div>
+                <div class="select">
+                    <h2>FOCUS</h2>
+                    <span>SELECT</span>
+
+                    <p>
+                        Unlimited access to <br>
+                        Single centre and at home work outs
+                    </p>
+                </div>
+            </div>
+ 
+<!-- <section class="jumbotron"> -->
+  
+
+        <div class="image-container">
+            <img src="workOutSpace.avif" alt="Left Image" class="image left">
+            <img src="workOutSpace.avif" alt="Right Image" class="image right">
+            <img src="workOutSpace.avif" alt="Top Image" class="image top">
+        </div>
+
+  
+<!-- </section> -->
+
+
+<div class="slider">
+    <!-- Radio Buttons -->
+    <input type="radio" name="radio-btn" id="radio1" checked>
+    <input type="radio" name="radio-btn" id="radio2">
+    <input type="radio" name="radio-btn" id="radio3">
+    <input type="radio" name="radio-btn" id="radio4">
+
+    <!-- Slides -->
+    <div class="slides">
+        <div class="slide"><img src="workOutSpace.avif" alt="Image 1"></div>
+        <div class="slide"><img src="run.avif" alt="Image 2"></div>
+        <div class="slide"><img src="workOutSpace.avif" alt="Image 3"></div>
+        <div class="slide"><img src="workOutSpace.avif" alt="Image 4"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+    </div>
+</div>
+
+<div class="badge">
+    <div class="upper">
+        <div>
+
+        </div>
+         <div>
+
+         </div>
+    </div>
+
+    <div class="lower">
+        <div>
+
+        </div>
+         <div>
+            
+         </div>
+    </div>
+</div>
+
+
+<footer>
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+</footer>
+
+        <script>
+            // const toggleBtn = document.querySelector(".toggle_btn");
+            // const toggleBtnIcon = document.QuerySelector(".toggle_btn i");
+            // const dropdDownMenu = document.QuerSelector(".dropdown_menu");
+
+            // toggleBtn.onClick = function(){
+            //     dropDownMenu.classList.toggle('open')
+            //     const isOpen = dropDownMenu.classList("open")
+
+            //     toggleBtnIcon.classList = isOpen
+            //         ? 'fa-solid fa-xmark'
+            //         : 'fa-solid fa-bars'
+            // }
+
+            const images = document.querySelectorAll('.image');
+
+// Store last scroll position
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', function () {
+    let scrollValue = window.scrollY;
+
+    // Detect scroll up (current scroll is less than last recorded)
+    if (scrollValue < lastScrollY) {
+        images.forEach(img => img.classList.add('active'));
+    }
+
+    // Update last scroll position
+    lastScrollY = scrollValue;
+});
+            
+        </script>
+        </main>
+    </body>
+</html>
