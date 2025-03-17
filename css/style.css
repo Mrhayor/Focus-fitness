@@ -199,6 +199,7 @@ header .ham-burger.active span:nth-child(2){
 /*About section*/
 
 .about{
+	text-align: justify;
 	padding:80px 0px;
 	background-color:#ffffff;
 }
@@ -223,6 +224,7 @@ header .ham-burger.active span:nth-child(2){
 }
 .about .content .box .inner .text{
 	padding:30px;
+	text-align: justify;
 }
 
 .about .content .box .inner .text h4{
@@ -238,7 +240,7 @@ header .ham-burger.active span:nth-child(2){
 	font-size: 15px;
 	line-height:20px;
 	color:#ffffff;
-	text-align: center;
+	text-align: justify;
 	margin:0;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -269,6 +271,7 @@ header .ham-burger.active span:nth-child(2){
 }
 
 .service .content .text p{
+	text-align: justify;
     font-size: 15px;
 	line-height:20px;
 	color:#ffffff;
@@ -337,6 +340,7 @@ header .ham-burger.active span:nth-child(2){
 	display: block;
 }
 .service .content .accordian-container .body p{
+	text-align: justify;
     font-size: 15px;
 	line-height:20px;
 	color:#ffffff;
@@ -378,6 +382,7 @@ header .ham-burger.active span:nth-child(2){
 }
 
 .classes .content .text p{
+	text-align: justify;
 	font-size: 15px;
     line-height: 20px;
     color: #000000;
@@ -496,6 +501,7 @@ header .ham-burger.active span:nth-child(2){
 }
 
 .start-today .content .text p{
+	text-align: justify;
 	font-size: 15px;
     line-height: 20px;
     color: #ffffff;
@@ -549,6 +555,7 @@ header .ham-burger.active span:nth-child(2){
 }
 
 .schedule .content .text p{
+	text-align: justify;
 	font-size: 15px;
     line-height: 20px;
     color: #222222;

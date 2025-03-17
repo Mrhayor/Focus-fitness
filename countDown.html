@@ -4,67 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        .stopwatch-container {
-            display: none;
-            position: relative;
-            margin-top: 20px;
-            width: 200px;
-            height: 200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .stopwatch {
-            font-size: 2em;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .circle-progress {
-            transform: rotate(-90deg);
-            transition: stroke-dashoffset 1s linear;
-        }
-        button {
-            margin: 5px;
-            padding: 10px;
-            font-size: 1em;
-            width: 100px;
-        }
-        .exercise-form {
-            display: none;
-            margin-top: 20px;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-        }
-        form input, select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        @media (max-width: 600px) {
-            .stopwatch {
-                font-size: 1.5em;
-            }
-            button {
-                width: 80px;
-                font-size: 0.9em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/countDown.css">
 </head>
 <body>
     <h1>Select Your Exercise</h1>
