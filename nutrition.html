@@ -3,186 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutrition for Workout Enthusiasts</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            color: #2980b9;
-            margin-top: 30px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .nutrition-tips, .meal-plan {
-            text-align: left;
-            margin-top: 20px;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-
-        th {
-            background-color: #2980b9;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .nutrition-img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 5px;
-            margin: 15px auto;
-            display: block;
-        }
-
-        .meal-img {
-            width: 80px;
-            height: auto;
-            border-radius: 5px;
-            vertical-align: middle;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-            h2 {
-                font-size: 1.2em;
-            }
-            table, th, td {
-                font-size: 0.9em;
-            }
-            .meal-img {
-                width: 60px;
-            }
-            .nutrition-img {
-                max-width: 300px;
-            }
-        }
-    </style>
+    <title>Fit & Fueled - Nutrition for Fitness</title>
+    <link rel="stylesheet" href="css/nutritionpage.css">
 </head>
 <body>
+    <header>
+        <div class="slideshow">
+            <div class="slides">
+                <div class="slide" style="background-image: url('images/nutrition3.webp');"></div>
+                <div class="slide" style="background-image: url('images/nutrition4.webp');"></div>
+                <div class="slide" style="background-image: url('images/nutrition2.avif');"></div>
+                <div class="slide" style="background-image: url('images/nutrition1.avif');"></div>
+            </div>
+        </div>
+        <h1>Fit & Fueled</h1>
+        <p>Nutrition Tips to Power Your Workouts</p>
+        <nav>
+            <a href="#tips">Tips</a>
+            <a href="#meal-plan">Meal Plan</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>Nutrition for Workout Enthusiasts</h1>
-        <p>Welcome to your guide for fueling your body to support your workout goals! Proper nutrition is key to maximizing performance, recovery, and muscle growth.</p>
-        <img src="images/nutrition-hero.jpg" alt="Healthy nutrition plate" class="nutrition-img">
-
-        <div class="nutrition-tips">
-            <h2>Key Nutrition Tips</h2>
+        <p>Eating right is just as important as your workouts. Fuel up with the right nutrients to crush your goals, recover faster, and feel awesome.</p>
+     
+        <div class="nutrition-tips" id="tips">
+            <h2>Top Nutrition Tips for Fitness</h2>
             <ul>
-                <li><strong>Protein:</strong> Aim for 1.6-2.2g per kg of body weight daily to support muscle repair (e.g., chicken, eggs, tofu).</li>
-                <li><strong>Carbohydrates:</strong> Fuel your workouts with 4-7g per kg of body weight daily (e.g., oats, rice, sweet potatoes).</li>
-                <li><strong>Fats:</strong> Include healthy fats (0.5-1g per kg) for energy and hormone balance (e.g., avocado, nuts, olive oil).</li>
-                <li><strong>Hydration:</strong> Drink at least 2-3 liters of water daily, more if you're sweating heavily.</li>
-                <li><strong>Timing:</strong> Eat a balanced meal 2-3 hours before exercising and a protein-carb combo within 30 minutes post-workout.</li>
+                <li><strong>Protein Power:</strong> Aim for 1.6-2.2g per kg of body weight daily to rebuild muscles. Think chicken, eggs, or plant-based tofu!</li>
+                <li><strong>Carb Charge:</strong> Get 4-7g per kg of body weight for energy. Load up on oats, sweet potatoes, or whole grains.</li>
+                <li><strong>Fat Fuel:</strong> Include 0.5-1g per kg of healthy fats for stamina and balance—avocado, nuts, or olive oil are your friends.</li>
+                <li><strong>Stay Hydrated:</strong> Drink 2-3 liters of water daily (more if you sweat a lot) to keep moving strong.</li>
+                <li><strong>Timing Matters:</strong> Eat a balanced meal 2-3 hours pre-workout, and grab a protein-carb snack (like a shake + fruit) within 30 mins post-workout.</li>
             </ul>
-            <img src="images/protein-foods.jpg" alt="Protein-rich foods" class="nutrition-img">
+
         </div>
 
-        <div class="meal-plan">
-            <h2>Sample Daily Meal Plan</h2>
-            <p>Here’s a sample meal plan for a 70kg (154lb) individual aiming to build muscle:</p>
-            <table>
-                <tr>
-                    <th>Meal</th>
-                    <th>Time</th>
-                    <th>Food</th>
-                    <th>Image</th>
-                    <th>Macros (Approx)</th>
-                </tr>
-                <tr>
-                    <td>Breakfast</td>
-                    <td>7:00 AM</td>
-                    <td>Oatmeal (100g), 1 banana, 20g peanut butter</td>
-                    <td><img src="images/oatmeal.jpg" alt="Oatmeal with banana" class="meal-img"></td>
-                    <td>Carbs: 80g, Protein: 15g, Fat: 18g</td>
-                </tr>
-                <tr>
-                    <td>Snack</td>
-                    <td>10:00 AM</td>
-                    <td>Greek yogurt (200g), 10 almonds</td>
-                    <td><img src="images/yogurt-almonds.jpg" alt="Greek yogurt with almonds" class="meal-img"></td>
-                    <td>Carbs: 10g, Protein: 20g, Fat: 10g</td>
-                </tr>
-                <tr>
-                    <td>Lunch</td>
-                    <td>1:00 PM</td>
-                    <td>Grilled chicken (200g), brown rice (100g), steamed broccoli</td>
-                    <td><img src="images/chicken-rice.jpg" alt="Chicken and rice" class="meal-img"></td>
-                    <td>Carbs: 50g, Protein: 50g, Fat: 5g</td>
-                </tr>
-                <tr>
-                    <td>Pre-Workout</td>
-                    <td>4:00 PM</td>
-                    <td>Whole grain toast, 1 tbsp almond butter</td>
-                    <td><img src="images/toast-almond.jpg" alt="Toast with almond butter" class="meal-img"></td>
-                    <td>Carbs: 30g, Protein: 5g, Fat: 8g</td>
-                </tr>
-                <tr>
-                    <td>Post-Workout</td>
-                    <td>6:30 PM</td>
-                    <td>Protein shake (30g whey), 1 apple</td>
-                    <td><img src="images/protein-shake.jpg" alt="Protein shake" class="meal-img"></td>
-                    <td>Carbs: 25g, Protein: 25g, Fat: 1g</td>
-                </tr>
-                <tr>
-                    <td>Dinner</td>
-                    <td>8:00 PM</td>
-                    <td>Salmon (150g), quinoa (80g), mixed greens</td>
-                    <td><img src="images/salmon-quinoa.jpg" alt="Salmon with quinoa" class="meal-img"></td>
-                    <td>Carbs: 40g, Protein: 35g, Fat: 20g</td>
-                </tr>
-            </table>
-            <p><em>Total (Approx):</em> Carbs: 235g, Protein: 150g, Fat: 62g (~2400-2600 kcal)</p>
+        <div class="meal-plan" id="meal-plan">
+            <h2>Sample Meal Plan for a Fit Day</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td class><strong>Breakfast</strong></td>
+                        <td><strong>Food Item</strong><br>scrambled eggs whole <br> wheat toast avocado</td>
+                        <td><strong>Calories</strong> <br/> 450kcal</td>
+                        <td><strong>Protein</strong> <br/> 25g</td>
+                        <td><strong>Carbs</strong> <br/> 40g</td>
+                        <td><strong>Fats</strong> <br/> 20g</td>
+                        
+                    </tr>
+                    <tr>
+                    <td class><strong>Snack</strong></td>
+                    <td><strong>Food Item</strong><br>Greek yogurt, <br> almonds, honey</td>
+                    <td><strong>Calories</strong> <br/> 300kcal</td>
+                    <td><strong>Protein</strong> <br/> 20g</td>
+                    <td><strong>Carbs</strong> <br/> 30g</td>
+                    <td><strong>Fats</strong> <br/> 15g</td>
+                    </tr>
+                    <tr>
+                    <td class><strong>Lunch</strong></td>
+                    <td><strong>Food Item</strong><br>Grilled chicken breast quinoa, <br> steamed broccoli</td>
+                    <td><strong>Calories</strong> <br/> 600kcal</td>
+                    <td><strong>Protein</strong> <br/> 50g</td>
+                    <td><strong>Carbs</strong> <br/> 50g</td>
+                    <td><strong>Fats</strong> <br/> 10g</td>                   	 	</tr>
+                    <tr>
+                    <td class><strong>Snack</strong></td>
+                    <td><strong>Food Item</strong><br>Protein shake, <br> banana</td>
+                    <td><strong>Calories</strong> <br/> 400kcal</td>
+                    <td><strong>Protein</strong> <br/> 35g</td>
+                    <td><strong>Carbs</strong> <br/> 50g</td>
+                    <td><strong>Fats</strong> <br/> 5g</td>
+                    </tr>
+                    <tr>
+                    <td class><strong>Dinner</strong></td>
+                    <td><strong>Food Item</strong><br>Salmon, sweet potatoes <br> spinach</td>
+                    <td><strong>Calories</strong> <br/> 550kcal</td>
+                    <td><strong>Protein</strong> <br/> 45g</td>
+                    <td><strong>Carbs</strong> <br/> 45g</td>
+                    <td><strong>Fats</strong> <br/> 18g</td>
+                    </tr>
+                    <tr>
+                    <td class><strong>Total</strong></td>
+                    <td><strong>Food Item</strong><br>-</td>
+                    <td><strong>Calories</strong> <br/> 2300kcal</td>
+                    <td><strong>Protein</strong> <br/> 175g</td>
+                    <td><strong>Carbs</strong> <br/> 215g</td>
+                    <td><strong>Fats</strong> <br/> 68g</td>
+                    </tr>
+                </tbody>
+           </table>
         </div>
 
-        <p>Adjust portion sizes based on your specific goals (e.g., weight loss, muscle gain) and activity level. Consult a nutritionist for personalized advice!</p>
+        <p>Need a custom plan? Chat with a nutritionist to level up your fitness game!</p>
     </div>
+
+    <footer id="contact">
+        <p>© 2025 Focus fitness | <a href="soluwaseun946@gmail.com">Get in Touch</a></p>
+    </footer>
+
+    <script src="js/nutrition.js"></script>
 </body>
 </html>
