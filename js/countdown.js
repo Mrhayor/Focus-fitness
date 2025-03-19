@@ -99,8 +99,7 @@ function resetStopwatch() {
     const images = document.querySelectorAll(".slideshow");
     images.forEach(img => img.style.display = 'none');
     document.getElementById("exerciseTitle").textContent = "";
-    document.getElementById("textToRead").textContent = "This is some sample text on the screen that will be read aloud.";
-    document.getElementById("textToRead").style.display = "none";
+ 
 }
 
 function fillExerciseForm() {

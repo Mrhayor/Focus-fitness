@@ -749,6 +749,7 @@ header .ham-burger.active span:nth-child(2){
 .contact .content .form input:focus,
 .contact .content .form textarea:focus{
  outline: none;
+ background-color: #c11325;
 }
 .contact .content .form input::placeholder,
 .contact .content .form textarea::placeholder{
