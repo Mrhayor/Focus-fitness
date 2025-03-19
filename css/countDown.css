@@ -1,13 +1,13 @@
 body{
-	margin:0;
-	padding:0;
-	overflow-x: hidden;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
 }
 
 *{
-	box-sizing: border-box;
-	margin:0;
-	padding:0;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
 }
 
 body {
@@ -61,6 +61,34 @@ form input, select {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+p {
+    width: 80%;
+    margin: 20px auto;
+    font-size: 18px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#imageContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 200px;
+    height: auto;
+    display: none;
+}
+
+#exerciseTitle {
+    display: block;
+}
+#textToRead {
+    display: none;
 }
 
 @media (max-width: 600px) {
