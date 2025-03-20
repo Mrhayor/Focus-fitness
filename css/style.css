@@ -735,6 +735,16 @@ header .ham-burger.active span:nth-child(2){
 	padding: 15px;
 }
 
+.form button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
 .contact .content .form input,
 .contact .content .form textarea{
  height: 45px;
@@ -773,7 +783,7 @@ header .ham-burger.active span:nth-child(2){
 	cursor: pointer;
 }
 .contact .content .form button:hover{
-	background-color:transparent;
+	/* background-color:transparent; */
 	color:#ffffff; 
     border-color:#ffffff;
 }

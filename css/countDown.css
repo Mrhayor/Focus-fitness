@@ -91,6 +91,12 @@ img {
     display: none;
 }
 
+.slideshow {
+    width: 400px; /* Medium size */
+    height: auto; /* Maintains aspect ratio */
+    display: none; /* Keeps the original functionality */
+}
+
 @media (max-width: 600px) {
     .stopwatch {
         font-size: 1.5em;

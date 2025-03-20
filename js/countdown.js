@@ -41,6 +41,34 @@ function updateDisplay() {
     }
 }
 
+function getTimeString() {
+    let minutes = Math.floor(elapsedTime / 60);
+    let seconds = elapsedTime % 60;
+    return String(minutes).padStart(2, '0') + " minutes and " + 
+           String(seconds).padStart(2, '0') + " seconds";
+}
+
+function speakRepeatedly(baseText) {
+    if (!running || elapsedTime <= 0) {
+        speechSynthesis.cancel();
+        return;
+    }
+
+    const timeString = getTimeString();
+    const speechText = `The time is ${timeString}. ${baseText} The time is now ${timeString}.`;
+    speech = new SpeechSynthesisUtterance(speechText);
+    speech.lang = 'en-US';
+    
+    speech.onend = () => {
+        // Only repeat if timer is still running
+        if (running && elapsedTime > 0) {
+            speakRepeatedly(baseText);
+        }
+    };
+    
+    speechSynthesis.speak(speech);
+}
+
 function startStopwatch() {
     if (!running && elapsedTime > 0) {
         running = true;
@@ -69,10 +97,8 @@ function startStopwatch() {
         document.getElementById("textToRead").style.display = "block";
 
         if ('speechSynthesis' in window) {
-            const text = document.getElementById("textToRead").innerText;
-            speech = new SpeechSynthesisUtterance(text);
-            speech.lang = 'en-US';
-            speechSynthesis.speak(speech);
+            const baseText = document.getElementById("textToRead").innerText;
+            speakRepeatedly(baseText);
         } else {
             alert("Your browser does not support speech synthesis.");
         }
@@ -99,7 +125,6 @@ function resetStopwatch() {
     const images = document.querySelectorAll(".slideshow");
     images.forEach(img => img.style.display = 'none');
     document.getElementById("exerciseTitle").textContent = "";
- 
 }
 
 function fillExerciseForm() {
